@@ -10,9 +10,26 @@ $pink: #f06595;
     &.active {
         background:dartken($color,10%);
     }
+    &.outline {
+        color:$color;
+        background:none;
+        border: 1px solid $color;
+        &:hover {
+            background: $color;
+            color:white;
+        }
+    }
 }
 
 .Button {
+    &.fullWidth {
+        width: 100%;
+        justify-content: center;
+        & + & {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+    }
     display:inline-flex;
     color:white;
     font-weight: bold;
